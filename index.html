@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Vista de solo lectura de un libro de Excel.">
+    <title>Visor de Excel</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="filebar">
+      <div>
+        <h1 id="filename">Libro de Excel</h1>
+        <p>Vista de solo lectura</p>
+      </div>
+      <a class="download" id="download" href="workbook.xlsx" download>
+        Descargar Excel
+      </a>
+    </header>
+
+    <main>
+      <nav class="sheet-tabs" id="sheet-tabs" aria-label="Hojas del libro" hidden></nav>
+      <section class="sheet" id="sheet" aria-live="polite">
+        <p class="status" id="status">Cargando libro…</p>
+      </section>
+    </main>
+  </body>
+</html>
