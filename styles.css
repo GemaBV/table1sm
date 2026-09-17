@@ -105,9 +105,10 @@ main { padding: clamp(16px, 3vw, 36px); }
 
 .sheet table {
   min-width: 100%;
+  width: max-content;
   border-spacing: 0;
   border-collapse: collapse;
-  table-layout: auto;
+  table-layout: fixed;
   font-size: 13px;
 }
 
@@ -123,6 +124,8 @@ main { padding: clamp(16px, 3vw, 36px); }
   vertical-align: middle;
   white-space: pre-wrap;
 }
+
+.sheet td a { color: inherit; }
 
 .sheet tr:first-child > td,
 .sheet tr:first-child > th { border-top: 0; }

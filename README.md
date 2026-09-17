@@ -10,4 +10,4 @@ Keep exactly one Excel file (`.xlsx`, `.xls`, `.xlsm`, or `.xlsb`) in the reposi
 2. In **Settings → Pages → Build and deployment**, select **GitHub Actions**.
 3. The included workflow will publish the site automatically.
 
-The original Excel workbook remains available for download from the page. The browser renders it with the SheetJS Community Edition standalone script.
+The original Excel workbook remains available for download from the page. For OOXML workbooks, the browser uses SheetJS for formatted values and ExcelJS to reproduce workbook formatting such as fonts, colors, borders, alignment, merged cells, and row/column sizing. Older or unsupported Excel formats fall back to a basic read-only table.
